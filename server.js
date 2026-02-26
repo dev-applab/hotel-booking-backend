@@ -15,6 +15,7 @@ app.use(cors({
     'http://localhost:5175',
     'http://localhost:5176',
     'http://localhost:5177',
+    'https://hotel-booking-app-five.vercel.app',
   ],
   credentials: true,
 }))
@@ -34,8 +35,8 @@ app.get('/', (req, res) => {
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('✅ Connected to MongoDB')
-    app.listen(process.env.PORT || 5000, () => {
-      console.log(`🚀 Server running on port ${process.env.PORT || 5000}`)
+    app.listen(process.env.PORT || 8000, () => {
+      console.log(`🚀 Server running on port ${process.env.PORT || 8000}`)
     })
   })
   .catch((err) => {
